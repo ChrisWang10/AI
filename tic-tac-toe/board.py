@@ -13,6 +13,17 @@ class GameBoard:
         """
         :return: return a string representation of the board
         """
+        ret = '\n'
+        for i in range(len(self.board)):
+            if self.board[i] == ' ':
+                ret += str(i)
+            else:
+                ret += self.board[i]
+            if (i+1)%self.board_size == 0:
+                ret += '\n'
+        ret += '\n'
+        return ret
+
 
 
 
